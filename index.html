@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome To My GET/POST request Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class='navbar'>
+        <div class="navv">
+            <li><a href='#'>PostMaster</a></li>
+            <li><a href='#'>Home</a></li>
+            <li><a href='#'>Contact</a></li>
+        </div>
+
+        <form class="input">
+            <input type='search' id='searchTxt' placeholder="Search">
+            <button class='btn'>Search</button>
+        </form>
+    </nav>
+    <div class="container">
+        <h1>Welcome to PostMaster</h1>
+        <form id='formGroup'>
+            <div>
+                <label for=forName>URL</label>
+                <input type="text" name="URL" id="formUrl" placeholder="URL">
+            </div>
+            <div id='requestType'>
+                <label for='get post'> Request Type</label>
+                <span><input type="radio" name="requestType" id="get" value=GET checked> GET </span>
+                <span><input type="radio" name="requestType" id="post" value=POST> POST</span>
+            </div>
+            <div id='contentType'>
+                <label for='json customParameters'> Content Type</label>
+                <span><input type="radio" name="contentType" id="json" value=JSON checked> JSON </span>
+                <span><input type="radio" name="contentType" id="customParameters" value=customParameters> Custom
+                    Parameters</span>
+            </div>
+
+            <!-- Parameters box - This will hide on clicking json option in content type  -->
+            <div id="parametersBox">
+                <div id="form-row">
+                    <label for="" class="uniqueLabel">Parameter 1</label>
+                    <div class="group">
+                        <input type="text" name="" id="parameterKey1" class="unique"
+                            placeholder="Enter parameter 1 Key">
+                    </div>
+                    <div class="group">
+                        <input type="text" name="" id="parameterValue1" class="unique"
+                            placeholder="Enter parameter 1 Value">
+                    </div>
+                    <button id="plusBtn" class="btn-btn">+</button>
+                </div>
+                <div id="multipleParams"></div>
+            </div>
+            <!-- Json Request box - This will hide on clicking parameters option in content type -->
+            <div id="requestJsonBox">
+                <label for="textArea" id="Area">Enter Request Json here </label>
+                <textarea name="textArea" id="requestJsonText" rows="5" cols="110"></textarea>
+            </div>
+            <button id='submitBtn' class="btn-btn">Submit</button>
+            <div id="responseJsonBox">
+                <label for="textArea" id="Area"> Response </label>
+                <textarea name="textArea" id="responseJsonText" rows="20"
+                    cols="110">Your Response will appear here...</textarea>
+            </div>
+        </form>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
